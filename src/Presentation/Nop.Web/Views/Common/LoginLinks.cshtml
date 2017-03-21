@@ -1,0 +1,13 @@
+﻿@model HeaderLinksModel
+@using Nop.Web.Models.Common;
+@if (Model.IsAuthenticated)
+{
+    <a href="@Url.RouteUrl("CustomerInfo")" class="btn btn-default">@T("Account.MyAccount")</a>
+    <a href="@Url.RouteUrl("Logout")" class="btn btn-default">@T("Account.Logout")</a>
+}
+else
+{
+    @*<li><a href="@Url.RouteUrl("Register")" class="ico-register">@T("Account.Register")</a></li>*@
+    @*<li><a href="" class="ico-login"></a></li>*@
+    <a href="@Url.RouteUrl("Login")" class="btn btn-default">@T("Account.Login")</a>
+}

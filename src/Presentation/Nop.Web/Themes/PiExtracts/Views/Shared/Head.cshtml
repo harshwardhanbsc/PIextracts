@@ -1,0 +1,13 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure
+@using Nop.Web.Framework.Themes
+@using Nop.Web.Framework.UI
+@{
+    var themeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/style-main.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/bootstrap.min.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/font-awesome.min.css", themeName));
+    Html.AddScriptParts("~/Scripts/jquery.min.js");
+    Html.AddScriptParts("~/Scripts/bootstrap.min.js");
+    Html.AddScriptParts("~/Scripts/custom.js");
+}

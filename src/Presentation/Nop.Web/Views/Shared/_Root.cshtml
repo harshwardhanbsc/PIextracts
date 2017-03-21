@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.Head.cshtml";
+}
+@Html.Widget("body_start_html_tag_after")
+@Html.Partial("_Notifications")
+@Html.Action("JavaScriptDisabledWarning", "Common")
+@Html.Partial("OldInternetExplorerWarning")
+<div id="wrapper">
+    <!-- preloader -->
+    @Html.Partial("Header")
+    @if (IsSectionDefined("Breadcrumb"))
+            {
+        @RenderSection("Breadcrumb")
+    }
+    @RenderBody()
+    <!-- end wrapper -->
+</div>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                <p>Copyright © 2017 Bigbudsdelivery. All rights reserved.</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6">
+                @Html.Action("Social", "Common")
+            </div>
+        </div>
+    </div>
+</footer>

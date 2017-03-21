@@ -1,0 +1,100 @@
+﻿@{
+    Layout = "~/Views/Shared/_Root.cshtml";
+}
+@{
+    //current category ID
+    int currentCategoryId = 0;
+    if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
+        Url.RequestContext.RouteData.Values["action"].ToString().Equals("category", StringComparison.InvariantCultureIgnoreCase))
+    {
+        currentCategoryId = Convert.ToInt32(Url.RequestContext.RouteData.Values["categoryId"].ToString());
+    }
+
+
+    //current manufacturer ID
+    int currentManufacturerId = 0;
+    if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
+        Url.RequestContext.RouteData.Values["action"].ToString().Equals("manufacturer", StringComparison.InvariantCultureIgnoreCase))
+    {
+        currentManufacturerId = Convert.ToInt32(Url.RequestContext.RouteData.Values["manufacturerId"].ToString());
+    }
+
+
+    //current product ID
+    int currentProductId = 0;
+    if (Url.RequestContext.RouteData.Values["controller"].ToString().Equals("product", StringComparison.InvariantCultureIgnoreCase) &&
+        Url.RequestContext.RouteData.Values["action"].ToString().Equals("productdetails", StringComparison.InvariantCultureIgnoreCase))
+    {
+        currentProductId = Convert.ToInt32(Url.RequestContext.RouteData.Values["productId"].ToString());
+    }
+}
+@if (IsSectionDefined("Breadcrumb"))
+{
+    @section Breadcrumb {
+        @RenderSection("Breadcrumb")
+    }
+}
+@if (IsSectionDefined("header"))
+{
+    @RenderSection("header")
+}
+
+<div class="main-content productsection">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <div id="sticky-anchor"></div>
+                <div id="sticky">
+                    @if (IsSectionDefined("left"))
+                    {
+                        @RenderSection("left")
+                    }
+                    else
+                    {
+                        @*@Html.Widget("left_side_column_before")
+                            @Html.Action("CategoryNavigation", "Catalog", new { currentCategoryId = currentCategoryId, currentProductId = currentProductId })
+                            @Html.Widget("left_side_column_after_category_navigation")
+                            @Html.Action("ManufacturerNavigation", "Catalog", new { currentManufacturerId = currentManufacturerId })
+                            @Html.Action("VendorNavigation", "Catalog")
+                            @Html.Action("RecentlyViewedProductsBlock", "Product", new { productThumbPictureSize = 64 })
+                            @Html.Action("PopularProductTags", "Catalog")
+                            @Html.Action("PollBlock", "Poll", new { systemKeyword = "LeftColumnPoll" })
+                            @Html.Widget("left_side_column_after")*@
+                    }
+                    @*<nav class="navbar navbar-default sidenav">
+
+
+
+
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#bud" role="tab" data-toggle="tab">Big Buds</a></li>
+                                <li><a href="#shatter" role="tab" data-toggle="tab">Shatter</a></li>
+                                <li><a href="#epens" role="tab" data-toggle="tab">ePens</a></li>
+                                <li><a href="#edibles" role="tab" data-toggle="tab">Edibles</a></li>
+                                <li><a href="#concentrates" role="tab" data-toggle="tab">Concentrates</a></li>
+                                <li><a href="#capsules" role="tab" data-toggle="tab">Capsules</a></li>
+                                <li><a href="#clones" role="tab" data-toggle="tab">Clones</a></li>
+                            </ul>
+
+                        </nav>*@
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        @Html.Widget("main_column_before")
+                        @RenderBody()
+                        @Html.Widget("main_column_after")
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end main-content -->
+@*<div class="side-2">
+
+    </div>
+    <div class="center-2">
+
+    </div>*@

@@ -1,0 +1,867 @@
+﻿@model IList<CategoryModel>
+@using Nop.Web.Models.Catalog;
+@using Nop.Web.Models.Common;
+@{
+    Layout = "~/Views/Shared/_ColumnsTwo.cshtml";
+
+    //title
+    Html.AddTitleParts("Products");
+    //page class
+    Html.AppendPageCssClassParts("html-product-page");
+}
+@Html.Action("HomepageCategories", "Catalog")
+@*<div class="product-content">
+        <div id="sticky-anchor"></div>
+        <div class="category-home prelative" id="sticky">
+            <div class="row">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <!-- Indicators -->
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item tab-item active">
+                            <a href="#shatter" data-toggle="tab">
+                                <img src="images/shater.png">
+                                <h3>Shatter</h3>
+                            </a>
+                        </div>
+
+                        <div class="item tab-item">
+                            <a href="#bud" data-toggle="tab">
+                                <img src="images/budder.png">
+                                <h3>Budder</h3>
+                            </a>
+                        </div>
+                        <div class="item tab-item">
+                            <a href="#concentrates" data-toggle="tab">
+                                <img src="images/concentrates.png">
+                                <h3>Concentrates</h3>
+                            </a>
+                        </div>
+                        <div class="item tab-item">
+                            <a href="#edibles" data-toggle="tab">
+                                <img src="images/edibles.png">
+                                <h3>Edibles</h3>
+                            </a>
+                        </div>
+                        <div class="item tab-item">
+                            <a href="#epens" data-toggle="tab">
+                                <img src="images/vapepens.png">
+                                <h3>Vape Pens</h3>
+                            </a>
+                        </div>
+                        <div class="item tab-item">
+                            <a href="#capsules" data-toggle="tab">
+                                <img src="images/capsule.png">
+                                <h3>Capsules</h3>
+                            </a>
+                        </div>
+                        <div class="item tab-item">
+                            <a href="#oils" data-toggle="tab">
+                                <img src="images/oils.png">
+                                <h3>Oils</h3>
+                            </a>
+                        </div>
+                        <div class="item tab-item">
+                            <a href="#tinctures" data-toggle="tab">
+                                <img src="images/tinctures.png">
+                                <h3>Tinctures</h3>
+                            </a>
+                        </div>
+                        <div class="item tab-item">
+                            <a href="#seeds" data-toggle="tab">
+                                <img src="images/seeds.png">
+                                <h3>Seeds</h3>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Nav tabs -->
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="shatter">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Shatter</div>
+                        <p class="bold">
+                            Shatter is a high concentrate THC extract that is one of the first mainstream concentrates to hit the market.
+                            Shatter looks like a hardened honey and is very potent even to the regular marijuana user, so start out slow if you are a first
+                            timer. Shatter is most commonly used for “Dabbing”, this is where a small piece of Shatter is applied to a “Rig” (similar to a
+                            bong but has a titanium or glass pin that is heated via a heating chamber or torch) with the optimal temperature being 575 –
+                            625 Degrees. And Remember “A Little Dab Will Do You!”
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 fivebox">
+                        <ul>
+                            <li>
+                                <img src="images/shater.png" />
+                                <h3>Master Kush<br> Shatter</h3>
+                                <p>High Content THC We offer only the Highest Quality Shatter Extracts</p>
+                            </li>
+                            <li>
+                                <img src="images/shater.png" />
+                                <h3>OG Kush<br> Shatter</h3>
+                                <p> High Content THC We offer only the Highest Quality Shatter Extracts</p>
+                            </li>
+                            <li>
+                                <img src="images/shater.png" />
+                                <h3>Green Crack God <br>Shatter </h3>
+                                <p>High Content THC We offer only the Highest Quality Shatter Extracts </p>
+
+                            </li>
+                            <li>
+                                <img src="images/shater.png" />
+                                <h3>Chemo <br>Shatter</h3>
+                                <p>
+                                    High Content THC We offer only the Highest Quality Shatter Extracts
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/shater.png" />
+                                <h3>Pineapple Express <br>Shatter</h3>
+                                <p>
+                                    High Content THC We offer only the Highest Quality Shatter Extracts
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gallery-block fivebox">
+                        <ul>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/masterkush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1 Gram </h3>
+                                        <h2>Master Kush</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/ViolatorKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1 Gram </h3>
+                                        <h2>OG Kush</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/PinkKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1 Gram</h3>
+                                        <h2>Green Crack God</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/GreenCrackGod.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1 Gram</h3>
+                                        <h2>Chemo</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/Pineappleexpress.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1 Gram</h3>
+                                        <h2>Pineapple express</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="bud">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Big Buds</div>
+                        <p class="bold">
+                            Big Bud Delivery has interviewed and inspected many Licensed Marijuana Cultivators and their respective facilities.
+                            After careful consideration only a few passed our rigorous selection process. The ones that remained produce the highest
+                            quality marijuana available and have proven to be reliably consistent. Big Bud Delivery takes great pride in offering you
+                            only the finest Marijuana Buds available.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 fivebox">
+                        <ul>
+                            <li>
+                                <img src="images/budder.png" />
+                                <h3>Master Kuch</h3>
+                                <p>
+                                    Master Kush is a popular Indica cross created out of two landrace strains from different parts of the Hindu Kush
+                                    region...
+                                    <a class="pop" data-target="#dyna" href="javascript:void(0)" pagetitle="Master Kush" pagename="masterkush.html">Read more</a>
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/budder.png" />
+                                <h3>Violator Kush</h3>
+                                <p>
+                                    Violator Kush is a pure Indica from old school Dutch breeders Barney’s Farm. A cross of Malana and Hindu Kush genetics,
+                                    it produces ...
+                                    <a class="pop" href="javascript:void(0)" pagetitle="Violator Kush" pagename="violator-kush.html">Read more</a>
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/budder.png" />
+                                <h3>Pink Kush </h3>
+                                <p>
+                                    Pink Kush, as coveted as its OG Kush relative, is an Indica-dominant hybrid with powerful body-focused effects.
+                                    In its exceptional...
+                                    <a class="pop" href="javascript:void(0)" pagetitle="Pink Kush" pagename="pink-kush.html">Read more</a>
+                                </p>
+
+                            </li>
+                            <li>
+                                <img src="images/budder.png" />
+                                <h3>Green Crack God</h3>
+                                <p>
+                                    Green Crack God is a balanced hybrid strain bred by Jordan of the Islands, who wanted to lighten up the heavy
+                                    effects of  ...
+                                    <a class="pop" href="javascript:void(0)" pagetitle="Green Crack God" pagename="green-crack-god.html">Read more</a>
+                                </p>
+                            </li>
+                            <li>
+                                <img src="images/budder.png" />
+                                <h3>Chemo</h3>
+                                <p>
+                                    Rumor has it that Chemo’s beginnings stretch back to the 1970s in Canada where this heavy Indica was allegedly
+                                    developed to treat the side  ...
+                                    <a class="pop" href="javascript:void(0)" pagetitle="Chemo" pagename="chemo.html">Read more</a>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gallery-block ">
+                        <ul>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/masterkush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1/8 Oz. </h3>
+                                        <h2>Master Kush</h2>
+                                        <p>$35.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/ViolatorKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1/4 Oz.  </h3>
+                                        <h2>Violator Kush</h2>
+                                        <p>$70.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/PinkKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1/2 Oz.  </h3>
+                                        <h2>Pink Kush</h2>
+                                        <p>$140.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/GreenCrackGod.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1 Oz. </h3>
+                                        <h2>Green Crack God</h2>
+                                        <p>$230.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/Pineappleexpress.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1/4 Oz</h3>
+                                        <h2>Pineapple express</h2>
+                                        <p>$85.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/hempstar.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1/4 Oz</h3>
+                                        <h2>Hemp Star</h2>
+                                        <p>$65.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/GreenCrackGod.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1/4 Oz</h3>
+                                        <h2>Green Crack God</h2>
+                                        <p>$75.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                <div class="mr-inner">
+                                    <img src="images/LemonSkunk.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>1/4 Oz</h3>
+                                        <h2>Lemon Skunk</h2>
+                                        <p>$80.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="concentrates">
+                <div class="row concentrates">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Concentrates</div>
+                        <p class="bold">
+                            Big Bud Delivery Concentrates are pure 95+% THC, CBD & THC/CBD extracts, in simple terms, it is one of the
+                            purest and most potent extracts available. These CO2 Critical Extraction processed concentrates can be smoked, vaporized,
+                            gasified or can be taken orally. Our Crystalline Isolates are the very purest form of extract you can archive with
+                            purities showing above 99%.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 fivebox">
+                        <ul>
+                            <li>
+                                <img src="images/concentrates.png" />
+                                <h3>THC Distillate<br>Oil</h3>
+                                <p> </p>
+                            </li>
+                            <li>
+                                <img src="images/concentrates.png" />
+                                <h3>62/32<br> THC/CBD<br>Distillate Oil</h3>
+
+                            </li>
+                            <li>
+                                <img src="images/concentrates.png" />
+                                <h3>CBD/THC<br>Full Spectrum <br>Distillate Oil</h3>
+
+
+                            </li>
+                            <li>
+                                <img src="images/concentrates.png" />
+                                <h3>CBD <br>Distillate Oil</h3>
+
+                            </li>
+                            <li>
+                                <img src="images/concentrates.png" />
+                                <h3>CBD<br>Crystalline<br>Isolate</h3>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gallery-block fivebox">
+                        <ul>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/masterkush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>THC </h3>
+                                        <h2>Distillate Oil</h2>
+                                        <p>1 Gram </p>
+                                        <p>Oral Syringe $60.00</p>
+                                        <p>5 Gram</p>
+                                        <p>Jar $275.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/ViolatorKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>62/32</h3>
+                                        <h2>THC/CBD  <br>Distillate Oil</h2>
+                                        <p>1 Gram Oral Syringe $65.00</p>
+                                        <p>5 Gram Jar $300.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/PinkKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>CBD/THC </h3>
+                                        <h2>Full Spectrum <br>Distillate Oil</h2>
+                                        <p>1 Gram Oral Syringe $70.00</p>
+                                        <p>5 Gram Jar $325.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/GreenCrackGod.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>CBD </h3>
+                                        <h2>Distillate Oil</h2>
+                                        <p>1 Gram Oral Syringe $60.00</p>
+                                        <p>5 Gram Jar $275.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/Pineappleexpress.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>CBD</h3>
+                                        <h2>Crystalline <br>Isolate</h2>
+                                        <p>Coming Soon</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="edibles">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Edibles</div>
+                        <p class="bold">
+                            Big Bud Edibles are delicious THC & CBD delivery options that are made in a sterile confectionary laboratory
+                            using Pure THC & CBD Distillates. It may sound easy to make a THC Lollipop but in fact it is much more complex than you may
+                            think, the challenges are in the blending process and end stability of the product. Most other Edibles are green in color
+                            which usually indicates that a chemical like Butane or Either was used in the extraction process making them impure with a
+                            low stability rate and lack flavor. Big Buds Delivery Edibles are processed using CO2 Critical Extraction that allows us to
+                            use chemical free, pure extracts that are stable and packed full of flavor.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 fivebox epens">
+                        <ul>
+                            <li>
+                                <img src="images/large-lolipop.png" />
+                                <h3>Large THC<br> Lollipops</h3>
+                                <p> 100mg THC <br> Pure THC Distillate & Terpenes</p>
+                            </li>
+                            <li>
+                                <img src="images/small-lolipop.png" />
+                                <h3>Small THC <br> Lollipops</h3>
+                                <p> 35mg THC<br>  Pure THC Distillate & Terpenes </p>
+                            </li>
+                            <li>
+                                <img src="images/candies.png" />
+                                <h3>THC  <br>Hard Candies</h3>
+                                <p> 10x 10mg THC <br> Pure THC Distillate & Terpenes</p>
+
+                            </li>
+                            <li>
+                                <img src="images/gummies.png" />
+                                <h3>THC <br> Gummies</h3>
+                                <p> 2x 50mg THC<br> Pure THC Distillate & Terpenes </p>
+                            </li>
+                            <li>
+                                <img src="images/chocolatebar.png" />
+                                <h3>THC <br> Chocolate Bar</h3>
+                                <p> 200mg THC  <br>Pure THC Distillate & Terpenes</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="gallery-block fivebox edibles">
+                        <ul>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/lolipop-large.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>Large THC Lollipop</h3>
+                                        <h2>100 Milligrams Each</h2>
+                                        <p>$15.00 per</p>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Orange</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Green Apple</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Grape</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Cherry</label>
+                                        </div>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/lolipop-small.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>Small THC Lollipop</h3>
+                                        <h2>25 Milligrams Each</h2>
+                                        <p>$6.00 per</p>
+                                        <p>$20.00 4 pack</p>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Orange</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Green Apple</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Grape</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Cherry</label>
+                                        </div>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/Candies.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>THC Hard Candies</h3>
+                                        <h2>10 Milligrams Each</h2>
+                                        <p>$15.00 Pack of 10</p>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Orange</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Green Apple</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Grape</label>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Cherry</label>
+                                        </div>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/gummes.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>THC Gummies</h3>
+                                        <h2>50 Milligrams Each</h2>
+                                        <p>$15.00 Pack of 2</p>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Very Berry</label>
+                                        </div>
+
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/chocolatebar.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>THC Chocolate Bar</h3>
+                                        <h2>200 Milligrams Each</h2>
+                                        <p>$25.00</p>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="">Milk Chocolate</label>
+                                        </div>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="epens">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Vape ePens</div>
+                        <p class="bold">
+                            Vape ePens are discrete, convenient and pack a good punch of Pure THC Distillate. Big Bud Delivery Vape ePens
+                            are mixed with terpenes (all natural flavor essence) and are available in a variety of flavors. Each Vape ePens provides you
+                            with over 100 draws of flavored or natural THC and most users require 1-3 draws per dose.
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 fivebox epens">
+                        <ul>
+                            <li>
+                                <img src="images/vapepens.png" />
+                                <h3>Blueberry<br> THC Distillate<br>Vape ePen</h3>
+                                <p>50ml<br>  10% THC<br>  Pure THC Distillate,<br> Terpenes & Organic MTC<br> Coconut Oil.</p>
+                            </li>
+                            <li>
+                                <img src="images/vapepens.png" />
+                                <h3>Grape<br>THC Distillate<br>Vape ePen</h3>
+                                <p>50ml<br>  10% THC<br>  Pure THC Distillate,<br> Terpenes & Organic MTC<br> Coconut Oil. </p>
+                            </li>
+                            <li>
+                                <img src="images/vapepens.png" />
+                                <h3>Pineapple <br>THC Distillate<br>Vape ePen </h3>
+                                <p>50ml<br>  10% THC<br>  Pure THC Distillate,<br> Terpenes & Organic MTC<br> Coconut Oil. </p>
+
+                            </li>
+                            <li>
+                                <img src="images/vapepens.png" />
+                                <h3>Mango <br>THC Distillate<br>Vape ePen</h3>
+                                <p>50ml<br>  10% THC<br>  Pure THC Distillate,<br> Terpenes & Organic MTC<br> Coconut Oil. </p>
+                            </li>
+                            <li>
+                                <img src="images/vapepens.png" />
+                                <h3>Natural<br>THC Distillate <br>Vape ePen</h3>
+                                <p>50ml<br>  10% THC<br>  Pure THC Distillate,<br> Terpenes & Organic MTC<br> Coconut Oil.  </p>
+                            </li>
+                        </ul>
+
+
+
+
+
+                    </div>
+                    <div class="gallery-block fivebox">
+                        <ul>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/masterkush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>Blueberry </h3>
+                                        <h2>THC Distillate<br> Vape ePen</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/ViolatorKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>Grape</h3>
+                                        <h2>THC Distillate <br>Vape ePen</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/PinkKush.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>Pineapple</h3>
+                                        <h2>THC Distillate <br>Vape ePen</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/GreenCrackGod.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>Mango</h3>
+                                        <h2>THC Distillate <br>Vape ePen</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="mr-inner">
+                                    <img src="images/Pineappleexpress.jpg" class="img-responsive" alt="">
+                                    <div class="mr-overlay">
+                                        <h3>Natural</h3>
+                                        <h2>THC Distillate <br>Vape ePen</h2>
+                                        <p>$45.00</p>
+                                        <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="capsules">
+                <div class="row">
+                    <div class="row capsules">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="title">Capsules</div>
+                            <p class="bold">
+                                Big Bud Delivery THC & CBD Gel Caps are made with Pure 95+% THC or CBD Distillates and Organic Grapeseed Oil.
+                                Our Gel Caps are a convenient, discrete and effective form of medication that has been proven life saving for certain ailments
+                                and are currently showing great promise for many other diseases.
+                            </p>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 three text-center">
+                            <ul>
+                                <li>
+                                    <img src="images/capsule.png" />
+                                    <h3>THC <br>Gel Capsules <br>High Content THC </h3>
+                                    <p>95+% THC Distillate with Grapeseed Oil <br>Available in 50 & 100 mg  </p>
+                                </li>
+                                <li>
+                                    <img src="images/capsule.png" />
+                                    <h3> THC/CBD<br> Gel Capsules</h3>
+                                    <p>95+% THC & CBD Distillate with Grapeseed Oil <br>Available in 50 & 100 mg</p>
+
+                                </li>
+                                <li>
+                                    <img src="images/capsule.png" />
+                                    <h3>CBD <br>Gel Capsules<br>High Content CBD</h3>
+                                    <p>95+% CBD Distillate with Grapeseed Oil <br>Available in 50 & 100 mg</p>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="gallery-block three">
+                            <ul>
+                                <li>
+                                    <div class="mr-inner">
+                                        <img src="images/masterkush.jpg" class="img-responsive" alt="">
+                                        <div class="mr-overlay">
+                                            <h3>THC </h3>
+                                            <h2>Gel Capsules</h2>
+                                            <p>10x 50 mg $40.00</p>
+                                            <p>30x 50 mg $110.00</p>
+                                            <p>THC Gel Capsules</p>
+                                            <p>10x 100 mg $70.00</p>
+                                            <p>30x 100mg $190.00</p>
+                                            <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mr-inner">
+                                        <img src="images/ViolatorKush.jpg" class="img-responsive" alt="">
+                                        <div class="mr-overlay">
+                                            <h3> CBD</h3>
+                                            <h2>Gel Capsules</h2>
+                                            <p>30x 50 mg $110.00</p>
+                                            <p>CBD Gel Capsules</p>
+                                            <p>10x 100 mg $70.00</p>
+                                            <p>30x 100mg $190.00</p>
+                                            <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="mr-inner">
+                                        <img src="images/PinkKush.jpg" class="img-responsive" alt="">
+                                        <div class="mr-overlay">
+                                            <h3> THC/CBD</h3>
+                                            <h2>Gel Capsules</h2>
+                                            <p>10x 50 mg $50.00</p>
+                                            <p>30x 50 mg $140.00</p>
+                                            <p>THC/CBD Gel Capsules</p>
+                                            <p>10x 100 mg $85.00</p>
+                                            <p>30x 100mg $240.00</p>
+                                            <a class="room-detail" href="#"><img src="images/cart.png" /> Add to cart</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <h3>Charlotte’s Web</h3>
+                            <p>
+                                If you have not heard the story of 5 year old Charlotte Figi please read on. Charlotte was suffering Dravet’s Syndrome
+                                and experiencing over 30 Grand Mal Seizures per month and was expected to die before she turned 6. After her family had
+                                exhausted all efforts and were told by her doctors that there was nothing more they could do but wait for her to die.
+                                Unwilling to accept a death sentence for their little girl they reluctantly tried CBD Oil and from the moment Charlotte
+                                took CBD’s her life changed. Her seizures were reduced to only a small handful of mild tremors and she is now living a
+                                happy healthy life...Solely because of CBD’s!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="oils">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Oils</div>
+                        <p>Coming soon...</p>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="tinctures">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Tinctures</div>
+                        <p>Coming soon...</p>
+                    </div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane " id="seeds">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="title">Seeds</div>
+                        <p>Coming soon...</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div><!-- end wrapper -->*@

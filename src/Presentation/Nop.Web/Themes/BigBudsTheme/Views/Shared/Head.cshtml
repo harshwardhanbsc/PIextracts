@@ -1,0 +1,20 @@
+﻿@using Nop.Core;
+@using Nop.Core.Infrastructure
+@using Nop.Web.Framework.Themes
+@using Nop.Web.Framework.UI
+@{
+    var themeName = EngineContext.Current.Resolve<IThemeContext>().WorkingThemeName;
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/style-main.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/bootstrap.min.css", themeName));
+    Html.AppendCssFileParts(string.Format("~/Themes/{0}/Content/css/font-awesome.min.css", themeName));
+    Html.AppendCssFileParts("~/Scripts/revolution-slider/css/settings.css");
+    Html.AddScriptParts("~/Scripts/jquery.min.js");
+    Html.AddScriptParts("~/Scripts/bootstrap.min.js");
+    Html.AddScriptParts("~/Scripts/revolution-slider/js/jquery.themepunch.tools.min.js");
+    Html.AddScriptParts("~/Scripts/revolution-slider/js/jquery.themepunch.revolution.min.js");
+    Html.AddScriptParts("~/Scripts/custom.js");
+    Html.AddScriptParts("~/Scripts/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js");
+    Html.AddScriptParts("~/Scripts/revolution-slider/js/extensions/revolution.extension.navigation.min.js");
+    Html.AddScriptParts("~/Scripts/revolution-slider/js/extensions/revolution.extension.parallax.min.js");
+    Html.AddScriptParts("~/Scripts/revolution-slider/js/extensions/revolution.extension.slideanims.min.js");
+}
